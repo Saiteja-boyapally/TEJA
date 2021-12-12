@@ -1,0 +1,717 @@
+@font-face {
+  font-family: 'Grold Rounded Slim Regular';
+  src: url("Fonts/GroldRoundedSlim-Regular.eot");
+  src: local("Fonts/GroldRoundedSlim-Regular"), local("Fonts/GroldRoundedSlim-Regular"), url("Fonts/GroldRoundedSlim-Regular.eot?#iefix") format("Fonts/embedded-opentype"), url("Fonts/GroldRoundedSlim-Regular.woff2") format("woff2"), url("Fonts/GroldRoundedSlim-Regular.woff") format("woff"), url("Fonts/GroldRoundedSlim-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.Home {
+  height: 100%;
+  padding-top: 35vh;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: "Grold Rounded Slim Regular";
+}
+
+.Home_Myname {
+  font-size: 4.5rem;
+  padding-left: 0.5rem;
+  margin-bottom: 0%;
+}
+
+.Home_normal_text {
+  padding-top: 0%;
+  font-size: 3.5rem;
+  color: #00162e;
+}
+
+.body_text {
+  margin-top: 0%;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #2b2901;
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: 1rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger {
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  width: 28px;
+  height: 3px;
+  background: #7d5c00;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  width: 28px;
+  height: 3px;
+  background: #7d5c00;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  width: 28px;
+  height: 3px;
+  background: #7d5c00;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger.open {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+  background: transparent;
+}
+
+.menu-btn__burger.open::before {
+  background: white;
+  -webkit-transform: rotate(45deg) translate(5px, 8px);
+          transform: rotate(45deg) translate(5px, 8px);
+}
+
+.menu-btn__burger.open::after {
+  background: white;
+  width: 28px;
+  -webkit-transform: rotate(-45deg) translate(3px, -7px);
+          transform: rotate(-45deg) translate(3px, -7px);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vw;
+  opacity: 0.98;
+  visibility: hidden;
+}
+
+.nav.open {
+  visibility: visible;
+}
+
+.nav .menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100vh;
+  overflow: hidden;
+  background: #7d5c00;
+  list-style-type: none;
+  padding-right: 1rem;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav .menu-nav.open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.nav .menu-nav__item {
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.nav .menu-nav__item.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.nav .menu-nav__item.active > a {
+  color: white;
+}
+
+.nav .menu-nav__link {
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-weight: 300;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav .menu-nav__link:hover {
+  color: white;
+}
+
+.resume {
+  z-index: 2;
+  position: absolute;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: "Grold Rounded Slim Regular";
+}
+
+.resume:hover {
+  color: #7d5c00;
+}
+
+.menu-nav__item:nth-child(1) {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.menu-nav__item:nth-child(2) {
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+
+.menu-nav__item:nth-child(3) {
+  -webkit-transition-delay: 0.45s;
+          transition-delay: 0.45s;
+}
+
+.menu-nav__item:nth-child(4) {
+  -webkit-transition-delay: 0.55s;
+          transition-delay: 0.55s;
+}
+
+.menu-nav__item:nth-child(5) {
+  -webkit-transition-delay: 0.65s;
+          transition-delay: 0.65s;
+}
+
+#about {
+  background: #f9f5f4;
+}
+
+#about .class_Bio {
+  height: 100%;
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 2rem auto 0 auto;
+}
+
+#about .class_Bio .profile {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#about .class_Bio .profile h2 {
+  font-family: "Grold Rounded Slim Regular";
+  font-size: 3rem;
+}
+
+#about .class_Bio .profile .my_image {
+  margin-top: 2vh;
+  border-radius: 50%;
+  height: 40vh;
+  width: 40vh;
+  border: 2.5px solid #634800;
+}
+
+#about .class_Bio .profile .intro {
+  padding: 3% 3% 2% 3%;
+  font-size: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.5;
+}
+
+#about__bio {
+  width: 80%;
+  text-align: center;
+}
+
+#about .jobs {
+  width: 100%;
+  padding: 0 1rem 0 1.5rem;
+  margin: 1rem auto 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  text-align: center;
+}
+
+#about .jobs h3 {
+  font-size: 2rem;
+  font-family: "Grold Rounded Slim Regular";
+  text-decoration: underline;
+}
+
+#about .jobs__job {
+  background: white;
+  padding: 0.5rem;
+  position: relative;
+  border-bottom: 5px solid #7d5c00;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#about .jobs__job h2,
+#about .jobs__job h3 {
+  margin: 0.5rem 0;
+}
+
+#about .jobs__job h6 {
+  margin: 0.3rem 0;
+}
+
+#about .jobs__job_text-secondary {
+  padding-bottom: 0rem;
+  color: #7d5c00;
+}
+
+.projects {
+  padding-bottom: 2rem;
+  background: #f1e49c;
+  font-family: "Grold Rounded Slim Regular";
+}
+
+.projects_title {
+  height: 25vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.projects_title .headText {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.projects__items {
+  width: 75vw;
+  margin: 2rem auto 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+
+.projects__item {
+  position: relative;
+  border-bottom: 5px solid #7d5c00;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.projects__item .subtext {
+  text-align: center;
+  padding: 0.3rem 0 0 0;
+}
+
+.projects__item img {
+  width: 100%;
+}
+
+.projects__item::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #7d5c00;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.projects__item:hover::after {
+  top: 0;
+  opacity: 0.9;
+}
+
+.projects__item:hover .projects__btn {
+  opacity: 1;
+}
+
+.projects__btns {
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.projects__btn {
+  opacity: 0;
+  text-align: center;
+  margin-left: 10px;
+  color: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.projects__btn:hover {
+  color: #000;
+}
+
+.contact {
+  height: 100%;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Grold Rounded Slim Regular";
+}
+
+.contact h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.contact__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  font-size: 1.5rem;
+}
+
+.contact .social-icons {
+  text-align: center;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.contact .social-icons a {
+  padding: 0.4rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact .social-icons a:hover {
+  color: #7d5c00;
+}
+
+footer {
+  font-size: 1.5rem;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: center;
+  font-weight: 900;
+  padding: 1rem;
+  padding-bottom: 10vh;
+}
+
+.skill {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  background: #f7e686;
+  height: 100%;
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 2rem auto 0 auto;
+  font-family: "Grold Rounded Slim Regular";
+}
+
+.skill .heading {
+  padding: 1rem 1rem 1.5rem 1rem;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+.skill_text {
+  font-size: 3rem;
+}
+
+.skill .skill_item {
+  width: 60%;
+  margin: 0 auto;
+  padding: 0.8rem 1rem 0.5rem 2rem;
+  padding-left: 5%;
+  text-align: left;
+}
+
+.skill .text_item {
+  padding-left: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.skill .other {
+  padding-top: 2rem;
+}
+
+.skill .other h2 {
+  font-size: 2.5rem;
+  text-decoration: underline;
+}
+
+.skill .other p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 50%;
+  margin: 0 auto;
+  padding: 0.8rem 1rem 0.5rem 2rem;
+  padding-left: 5%;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .resume {
+    font-size: 2rem;
+  }
+  .menu-btn {
+    visibility: hidden;
+  }
+  .nav .menu-nav {
+    display: block;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    text-align: right;
+  }
+  .nav .menu-nav__item {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+  .nav .menu-nav__item.active > a {
+    color: #7d5c00;
+  }
+  .nav .menu-nav__link {
+    font-size: 1.5rem;
+    font-family: "Grold Rounded Slim Regular";
+  }
+  .nav .menu-nav__link:hover {
+    color: #7d5c00;
+  }
+  .Home_Myname {
+    font-size: 6.5rem;
+  }
+  .Home_normal_text {
+    font-size: 5.5rem;
+  }
+  #about .class_Bio {
+    height: 100%;
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    margin: 2rem auto 0 auto;
+  }
+  #about .class_Bio .profile {
+    text-align: center;
+    margin: 0 auto;
+  }
+  #about .class_Bio .profile h2 {
+    font-family: "Grold Rounded Slim Regular";
+    font-size: 3rem;
+  }
+  #about .class_Bio .profile .my_image {
+    margin-top: 2vh;
+    border-radius: 50%;
+    height: 40vh;
+    width: 40vh;
+    border: 2.5px solid #634800;
+  }
+  #about .class_Bio .profile .intro {
+    padding: 3% 3% 2% 3%;
+    font-size: 1.5rem;
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.5;
+  }
+  #about__bio {
+    width: 80%;
+    text-align: center;
+  }
+  #about .jobs {
+    width: 80%;
+    padding: 0 1rem 0 1.5rem;
+    margin: 1rem auto 0 auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    text-align: center;
+  }
+  #about .jobs h3 {
+    font-size: 2.5rem;
+    font-family: "Grold Rounded Slim Regular";
+    text-decoration: underline;
+  }
+  #about .jobs__job {
+    background: white;
+    padding: 0.5rem;
+    position: relative;
+    border-bottom: 5px solid #7d5c00;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  #about .jobs__job h2,
+  #about .jobs__job h3 {
+    margin: 0.5rem 0;
+  }
+  #about .jobs__job h6 {
+    margin: 0.3rem 0 0.3rem 0;
+    font-weight: 900;
+  }
+  #about .jobs__job_text-secondary {
+    padding-bottom: 0rem;
+    color: #7d5c00;
+  }
+  .skill .heading {
+    font-size: 3rem;
+  }
+  .skill_text {
+    font-size: 3.5rem;
+  }
+  .skill .skill_item {
+    width: 40%;
+    padding-left: 10%;
+    text-align: left;
+  }
+  .skill .text_item {
+    padding-left: 0.8rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .skill .other {
+    padding-top: 2rem;
+  }
+  .skill .other h2 {
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+  .skill .other p {
+    width: 30%;
+    padding-left: 10%;
+    text-align: left;
+  }
+  .body_text {
+    font-size: 2rem;
+  }
+  .about__bio {
+    font-size: 1.5rem;
+  }
+  .projects__items {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .projects .headText {
+    font-size: 3rem;
+  }
+}
+
+body {
+  background: #fefbf3;
+  height: 100vh;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,26 @@
+.Home {
+  height: 100%;
+  padding-top: 35vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  font-family: $teja_font;
+
+  &_Myname {
+    font-size: 4.5rem;
+    padding-left: 0.5rem;
+    margin-bottom: 0%;
+  }
+  &_normal_text {
+    padding-top: 0%;
+    font-size: 3.5rem;
+    color: #00162e;
+  }
+}
+
+.body_text {
+  margin-top: 0%;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #2b2901;
+}

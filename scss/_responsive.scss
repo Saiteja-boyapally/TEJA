@@ -1,0 +1,181 @@
+@include media-md {
+  .resume {
+    font-size: 2rem;
+  }
+  .menu-btn {
+    visibility: hidden;
+  }
+
+  .nav {
+    // visibility: visible;
+
+    .menu-nav {
+      display: block;
+      transform: translateY(0);
+      height: 100%;
+      width: 100%;
+      background: transparent;
+      text-align: right;
+
+      &__item {
+        display: inline;
+        padding-right: 1.5rem;
+        &.active > a {
+          color: $text_brown;
+        }
+      }
+
+      &__link {
+        font-size: 1.5rem;
+        font-family: $teja_font;
+        // color: $text_brown;
+        &:hover {
+          color: $text_brown;
+        }
+      }
+    }
+  }
+
+  .Home {
+    &_Myname {
+      font-size: 6.5rem;
+    }
+    &_normal_text {
+      font-size: 5.5rem;
+    }
+  }
+  #about {
+    .class_Bio {
+      height: 100%;
+      padding-top: 5vh;
+      padding-bottom: 2vh;
+      // width: 80vh;
+      align-items: center;
+      text-align: center;
+      margin: 2rem auto 0 auto;
+
+      .profile {
+        text-align: center;
+        margin: 0 auto;
+        h2 {
+          font-family: $teja_font;
+          font-size: 3rem;
+        }
+
+        .my_image {
+          margin-top: 2vh;
+          border-radius: 50%;
+          height: 40vh;
+          width: 40vh;
+          border: 2.5px solid #634800;
+        }
+        .intro {
+          // padding-top: 1.3rem;
+          padding: 3% 3% 2% 3%;
+          font-size: 1.5rem;
+          width: 80%;
+          margin: 0 auto;
+          text-align: left;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    &__bio {
+      width: 80%;
+      text-align: center;
+    }
+
+    .jobs {
+      h3 {
+        font-size: 2.5rem;
+        font-family: $teja_font;
+        text-decoration: underline;
+      }
+      width: 80%;
+      padding: 0 1rem 0 1.5rem;
+      margin: 1rem auto 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 2rem;
+      text-align: center;
+
+      &__job {
+        background: lighten($primary-color, 10%);
+        padding: 0.5rem;
+        position: relative;
+        border-bottom: 5px solid $text_brown;
+        overflow: hidden;
+        cursor: pointer;
+
+        h2,
+        h3 {
+          margin: 0.5rem 0;
+        }
+        h6 {
+          margin: 0.3rem 0 0.3rem 0;
+          font-weight: 900;
+        }
+
+        &_text-secondary {
+          padding-bottom: 0rem;
+          color: $text_brown;
+          // color: brown;
+        }
+      }
+    }
+  }
+
+  .skill {
+    .heading {
+      font-size: 3rem;
+    }
+    &_text {
+      font-size: 3.5rem;
+    }
+    .skill_item {
+      width: 40%;
+
+      // padding: %;
+      padding-left: 10%;
+      text-align: left;
+    }
+    .text_item {
+      padding-left: 0.8rem;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .other {
+      padding-top: 2rem;
+      h2 {
+        font-size: 2rem;
+        text-decoration: underline;
+      }
+      p {
+        width: 30%;
+
+        // padding: %;
+        padding-left: 10%;
+        text-align: left;
+      }
+    }
+  }
+
+  .body_text {
+    font-size: 2rem;
+  }
+
+  .about__bio {
+    font-size: 1.5rem;
+  }
+
+  .projects {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .headText {
+      font-size: 3rem;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.contact {
+  height: 100%;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $teja_font;
+  // font-family: 'Ubuntu', sans-serif;
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .social-icons {
+    text-align: center;
+    bottom: 1rem;
+    left: 1rem;
+    a {
+      padding: 0.4rem;
+      @include transition_ease_icon;
+      &:hover {
+        color: $text_brown;
+      }
+    }
+  }
+}
+
+footer {
+  font-size: 1.5rem;
+  // position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: center;
+  font-weight: 900;
+  padding: 1rem;
+  padding-bottom: 10vh;
+}

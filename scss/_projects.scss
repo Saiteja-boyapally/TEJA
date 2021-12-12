@@ -1,0 +1,91 @@
+.projects {
+  padding-bottom: 2rem;
+  background: #f1e49c;
+  font-family: $teja_font;
+
+  &_title {
+    height: 25vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    .headText {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      // color: $text_brown;
+    }
+  }
+
+  &__items {
+    width: 75vw;
+    // height: 140vw;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  &__item {
+    position: relative;
+    border-bottom: 5px solid $text_brown;
+    overflow: hidden;
+    cursor: pointer;
+    .subtext {
+      text-align: center;
+      padding: 0.3rem 0 0 0;
+    }
+    img {
+      width: 100%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: $text_brown;
+      opacity: 0;
+      @include transition_ease_icon;
+    }
+
+    &:hover {
+      &::after {
+        top: 0;
+        opacity: 0.9;
+      }
+      .projects__btn {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__btns {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+  }
+
+  &__btn {
+    opacity: 0;
+    text-align: center;
+    margin-left: 10px;
+    color: set-text-color($text_brown);
+    @include transition_ease_icon;
+
+    &:hover {
+      color: set-text-color(set-text-color($text_brown));
+    }
+  }
+}

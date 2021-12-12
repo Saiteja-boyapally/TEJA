@@ -1,0 +1,55 @@
+$primary_color: #fefbf3;
+$secondary_color: black;
+$text_brown: #7d5c00;
+
+//Rounded Font
+@font-face {
+  font-family: 'Grold Rounded Slim Regular';
+  src: url('Fonts/GroldRoundedSlim-Regular.eot');
+  src: local('Fonts/GroldRoundedSlim-Regular'),
+    local('Fonts/GroldRoundedSlim-Regular'),
+    url('Fonts/GroldRoundedSlim-Regular.eot?#iefix')
+      format('Fonts/embedded-opentype'),
+    url('Fonts/GroldRoundedSlim-Regular.woff2') format('woff2'),
+    url('Fonts/GroldRoundedSlim-Regular.woff') format('woff'),
+    url('Fonts/GroldRoundedSlim-Regular.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+$teja_font: 'Grold Rounded Slim Regular';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin transition_ease_icon {
+  transition: all 0.5s ease-in-out; // set a transition of 0.5s of ease in and out
+}
+
+@function set_text_color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Responsiveness
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}
